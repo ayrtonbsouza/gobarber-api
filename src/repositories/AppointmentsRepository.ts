@@ -2,6 +2,15 @@ import { isEqual } from 'date-fns';
 import Appointment from '../models/Appointment';
 
 /**
+ * Data Transfer Object
+ */
+
+interface CreateAppointmentDTO {
+  provider: string;
+  date: Date;
+}
+
+/**
  * Persistência <-> Repository <-> Rota
  * Repositório: Aonde buscamos informações,find, create, etc.
  * Um repositório por Model.
@@ -18,8 +27,8 @@ class AppointmentsRepository {
     return this.appointments;
   }
 
-  public create(provider: string, date: Date): Appointment {
-    const appointment = new Appointment(provider, date);
+  public create({ provider, date }: CreateAppointmentDTO): Appointment {
+    const appointment = new Appointment({ provider, date });
     this.appointments.push(appointment);
     return appointment;
   }
