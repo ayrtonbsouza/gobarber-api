@@ -37,11 +37,10 @@ O projeto foi feito com as seguintes tecnologias:
 #### Clonando o projeto
 ```sh
 $ git clone https://github.com/ayrtonbsouza/gs-backend-ts-node-gobarber-lesson.git
-$ cd gs-mobile-reactnative-concepts-lesson
 ```
 #### Iniciando a API
 ```sh
-$ cd api
+$ cd gs-backend-ts-node-gobarber-lesson
 
 # Criando a imagem Docker do banco de dados:
 # Dentro do projeto, já existe uma arquivo docker-compose.yml que possui o
