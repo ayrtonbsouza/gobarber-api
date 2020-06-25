@@ -38,8 +38,8 @@ O projeto foi feito com as seguintes tecnologias:
 ## :zap: Executando o Projeto
 #### Clonando o projeto
 ```sh
-$ git clone https://github.com/jvictorfarias/gobarber.git
-$ cd gobarber
+$ git clone https://github.com/ayrtonbsouza/gs-backend-ts-node-gobarber-lesson.git
+$ cd gs-mobile-reactnative-concepts-lesson
 ```
 #### Iniciando a API
 ```sh
