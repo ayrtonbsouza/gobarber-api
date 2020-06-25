@@ -8,7 +8,7 @@
 <p align="center" >
   <a href="#fire-prévia-da-aplicação"> :fire: Prévia da Aplicação</a> |
   <a href="#rocket-tecnologias-usadas"> :rocket: Tecnologias Usadas</a> |
-  <a href="#zap-executando-o-projeto"> :zap: Executando o Projeto </a> 
+  <a href="#zap-executando-o-projeto"> :zap: Executando o Projeto </a>
 </p>
 
 </div>
@@ -20,7 +20,7 @@ e usuários poderão marcar agendamentos com estes provedores.
 
 ## :fire: Prévia da Aplicação
 
-<div align="center"> 
+<div align="center">
 <img src="https://media.giphy.com/media/Lm6bmg75wR7Llcf9JG/giphy.gif" alt="preview"/>
 </div>
 
@@ -56,4 +56,5 @@ $ yarn && yarn typeorm migration:run && yarn dev:server
 
 Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
 
-<p align="center" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">Feito com :purple_heart: by <strong> Ayrton Souza</strong> </p>
+
+Made with ❤️ by **Ayrton Souza** :wave: [Get in touch!](https://www.linkedin.com/in/ayrtonsouza)
