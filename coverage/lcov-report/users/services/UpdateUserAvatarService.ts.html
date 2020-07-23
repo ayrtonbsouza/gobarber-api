@@ -100,38 +100,46 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -145,17 +153,16 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import path from 'path';</span>
 <span class="cstat-no" title="statement not covered" >import fs from 'fs';</span>
-<span class="cstat-no" title="statement not covered" >import { injectable, inject } from 'tsyringe';</span>
-import IUsersRepository from '@modules/users/repositories/IUsersRepository';
-&nbsp;
-<span class="cstat-no" title="statement not covered" >import AppError from '@shared/errors/AppError';</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >import uploadConfig from '@config/upload.config';</span>
-import User from '@modules/users/infra/typeorm/entities/User';
+<span class="cstat-no" title="statement not covered" >import AppError from '@shared/errors/AppError';</span>
+import IUsersRepository from '@modules/users/repositories/IUsersRepository';
+<span class="cstat-no" title="statement not covered" >import { injectable, inject } from 'tsyringe';</span>
+import User from '../infra/typeorm/entities/User';
 &nbsp;
 interface IRequest {
   user_id: string;
-  avatarFileName: string;
+  avatarFilename: string;
 }
 &nbsp;
 @injectable()
@@ -165,19 +172,24 @@ interface IRequest {
     private <span class="cstat-no" title="statement not covered" >usersRepository: IUsersRepository,</span>
   ) {}
 &nbsp;
-<span class="fstat-no" title="function not covered" >  public async <span class="cstat-no" title="statement not covered" >e</span>xecute({ user_id<span class="cstat-no" title="statement not covered" >, a</span>vatarFileName<span class="cstat-no" title="statement not covered" > }: IRequest)</span>: Promise&lt;User&gt; {</span>
+<span class="fstat-no" title="function not covered" >  public async <span class="cstat-no" title="statement not covered" >e</span>xecute({ user_id<span class="cstat-no" title="statement not covered" >, a</span>vatarFilename<span class="cstat-no" title="statement not covered" > }: IRequest)</span>: Promise&lt;User&gt; {</span>
     const <span class="cstat-no" title="statement not covered" >user = <span class="cstat-no" title="statement not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >await this.usersRepository.findById(user_id);</span></span></span>
+&nbsp;
 <span class="cstat-no" title="statement not covered" >    if (!user) {</span>
-<span class="cstat-no" title="statement not covered" >      throw new AppError('Only authenticated users can change avatar', 401);</span>
+<span class="cstat-no" title="statement not covered" >      throw new AppError('Only authenticated user can change avatar.', 401);</span>
     }
+&nbsp;
+    // if para verificar se ja tinha avatar, deletar avatar anterior
     if (<span class="cstat-no" title="statement not covered" >user.</span>avatar) {
       const <span class="cstat-no" title="statement not covered" >userAvatarFilePath = path.join(uploadConfig.directory, user.avatar);</span>
       const <span class="cstat-no" title="statement not covered" >userAvatarFileExists = <span class="cstat-no" title="statement not covered" >await fs.promises.stat(userAvatarFilePath);</span></span>
+&nbsp;
       if (<span class="cstat-no" title="statement not covered" >userAvatarFileExists)</span> {
 <span class="cstat-no" title="statement not covered" >        await fs.promises.unlink(userAvatarFilePath);</span>
       }
     }
-<span class="cstat-no" title="statement not covered" >    user.avatar = avatarFileName;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    user.avatar = avatarFilename;</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    await this.usersRepository.save(user);</span>
 &nbsp;
@@ -193,7 +205,7 @@ interface IRequest {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Jul 22 2020 12:04:03 GMT-0300 (GMT-03:00)
+                at Thu Jul 23 2020 02:44:37 GMT-0300 (GMT-03:00)
             </div>
         </div>
         <script src="../../prettify.js"></script>
