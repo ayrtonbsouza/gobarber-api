@@ -11,7 +11,7 @@ import '@shared/container';
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use('/files', express.static(uploadConfig.directory));
+app.use('/files', express.static(uploadConfig.uploadsFolder));
 app.use(routes);
 
 app.use(
@@ -33,7 +33,3 @@ app.use(
 app.listen(3333, () => {
   console.log('🚀 Server started and running on http://localhost:3333/');
 });
-
-/**
- * Persistência <-> Repository <-> Rota
- */
