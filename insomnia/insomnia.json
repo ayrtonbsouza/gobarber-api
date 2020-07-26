@@ -1,0 +1,254 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-07-26T19:23:56.855Z",
+  "__export_source": "insomnia.desktop.app:v2020.3.3",
+  "resources": [{
+    "_id": "req_16ba686a781a49f3bfe5ede23e50383c",
+    "authentication": {},
+    "body": {
+      "mimeType": "application/json",
+      "text": "{\n\t\"email\": \"tombsouza@icloud.com\",\n\t\"password\": \"12345678\"\n}"
+    },
+    "created": 1592968634095,
+    "description": "",
+    "headers": [{
+      "id": "pair_f774e99f768540f5a98752406c32bea7",
+      "name": "Content-Type",
+      "value": "application/json"
+    }],
+    "isPrivate": false,
+    "metaSortKey": -1592968634095,
+    "method": "POST",
+    "modified": 1595564745418,
+    "name": "Create",
+    "parameters": [],
+    "parentId": "fld_4aa35b23505c41ee8f1f45e752dfb3d2",
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingFollowRedirects": "global",
+    "settingRebuildPath": true,
+    "settingSendCookies": true,
+    "settingStoreCookies": true,
+    "url": "{{ base_url  }}/sessions",
+    "_type": "request"
+  }, {
+    "_id": "fld_4aa35b23505c41ee8f1f45e752dfb3d2",
+    "created": 1592968624499,
+    "description": "",
+    "environment": {},
+    "environmentPropertyOrder": null,
+    "metaSortKey": -1592968624499,
+    "modified": 1592968624499,
+    "name": "Sessions",
+    "parentId": "wrk_6386c2df6a314e169006c5c45adba633",
+    "_type": "request_group"
+  }, {
+    "_id": "wrk_6386c2df6a314e169006c5c45adba633",
+    "created": 1592787977691,
+    "description": "",
+    "modified": 1592787977691,
+    "name": "GoBarber - 2020",
+    "parentId": null,
+    "scope": null,
+    "_type": "workspace"
+  }, {
+    "_id": "req_283443c1bcc74f6088f9b6e46117544a",
+    "authentication": {},
+    "body": {
+      "mimeType": "application/json",
+      "text": "{\n\t\"name\": \"Ayrton Souza\",\n\t\"email\": \"tombsouza@icloud.com\",\n\t\"password\": \"12345678\"\n}"
+    },
+    "created": 1592965764273,
+    "description": "",
+    "headers": [{
+      "id": "pair_d77e35acbae04ab99279b4e2781653cd",
+      "name": "Content-Type",
+      "value": "application/json"
+    }],
+    "isPrivate": false,
+    "metaSortKey": -1592965764275,
+    "method": "POST",
+    "modified": 1595364086540,
+    "name": "Create",
+    "parameters": [],
+    "parentId": "fld_a885b3ddcb884240a74a14a632c36031",
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingFollowRedirects": "global",
+    "settingRebuildPath": true,
+    "settingSendCookies": true,
+    "settingStoreCookies": true,
+    "url": "{{ base_url  }}/users",
+    "_type": "request"
+  }, {
+    "_id": "fld_a885b3ddcb884240a74a14a632c36031",
+    "created": 1592965757037,
+    "description": "",
+    "environment": {},
+    "environmentPropertyOrder": null,
+    "metaSortKey": -1592965757038,
+    "modified": 1592965757037,
+    "name": "Users",
+    "parentId": "wrk_6386c2df6a314e169006c5c45adba633",
+    "_type": "request_group"
+  }, {
+    "_id": "req_a648551a78244c8ebe982eb4455e2816",
+    "authentication": {
+      "token": "{{ token  }}",
+      "type": "bearer"
+    },
+    "body": {
+      "mimeType": "multipart/form-data",
+      "params": [{
+        "description": "",
+        "fileName": "/Users/ayrtonsouza/Desktop/Captura de Tela 2020-06-19 às 01.51.04.png",
+        "id": "pair_97fb9d9b0afb45d4a19bf8baa9173775",
+        "name": "avatar",
+        "type": "file",
+        "value": ""
+      }]
+    },
+    "created": 1592980129826,
+    "description": "",
+    "headers": [{
+      "id": "pair_185cd74ca99a4ad38e0002c836629cc8",
+      "name": "Content-Type",
+      "value": "multipart/form-data"
+    }],
+    "isPrivate": false,
+    "metaSortKey": -1592965764225,
+    "method": "PATCH",
+    "modified": 1593026138643,
+    "name": "Update Avatar",
+    "parameters": [],
+    "parentId": "fld_a885b3ddcb884240a74a14a632c36031",
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingFollowRedirects": "global",
+    "settingRebuildPath": true,
+    "settingSendCookies": true,
+    "settingStoreCookies": true,
+    "url": "{{ base_url  }}/users/avatar",
+    "_type": "request"
+  }, {
+    "_id": "req_28d8cea5a1824bd38af275f803366a8a",
+    "authentication": {
+      "token": "{{ token  }}",
+      "type": "bearer"
+    },
+    "body": {
+      "mimeType": "application/json",
+      "text": "{\n\t\"provider_id\": \"65397fdd-b179-4521-9eda-26a22b7af10f\",\n\t\"date\": \"{% now 'iso-8601', '' %}\"\n}"
+    },
+    "created": 1592788053918,
+    "description": "",
+    "headers": [{
+      "id": "pair_8f8668e75ecb4a87b3b9de0c37c78b36",
+      "name": "Content-Type",
+      "value": "application/json"
+    }],
+    "isPrivate": false,
+    "metaSortKey": -1592788053918,
+    "method": "POST",
+    "modified": 1592970233616,
+    "name": "Create",
+    "parameters": [],
+    "parentId": "fld_f8d0c38ebba04e739796516a69a248e5",
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingFollowRedirects": "global",
+    "settingRebuildPath": true,
+    "settingSendCookies": true,
+    "settingStoreCookies": true,
+    "url": "{{ base_url  }}/appointments",
+    "_type": "request"
+  }, {
+    "_id": "fld_f8d0c38ebba04e739796516a69a248e5",
+    "created": 1592788049459,
+    "description": "",
+    "environment": {},
+    "environmentPropertyOrder": null,
+    "metaSortKey": -1592788049459,
+    "modified": 1592788049459,
+    "name": "Appointments",
+    "parentId": "wrk_6386c2df6a314e169006c5c45adba633",
+    "_type": "request_group"
+  }, {
+    "_id": "req_73119fa3b97d41c58b3ee616bd66cf45",
+    "authentication": {
+      "disabled": false,
+      "token": "{{ token  }}",
+      "type": "bearer"
+    },
+    "body": {},
+    "created": 1592855632126,
+    "description": "",
+    "headers": [],
+    "isPrivate": false,
+    "metaSortKey": -1592344661528.5,
+    "method": "GET",
+    "modified": 1592971110767,
+    "name": "List",
+    "parameters": [],
+    "parentId": "fld_f8d0c38ebba04e739796516a69a248e5",
+    "settingDisableRenderRequestBody": false,
+    "settingEncodeUrl": true,
+    "settingFollowRedirects": "global",
+    "settingRebuildPath": true,
+    "settingSendCookies": true,
+    "settingStoreCookies": true,
+    "url": "{{ base_url  }}/appointments",
+    "_type": "request"
+  }, {
+    "_id": "env_22641cf0fe0959afda19df99444c9e80ba3df04f",
+    "color": null,
+    "created": 1592787977881,
+    "data": {
+      "base_url": "http://localhost:3333"
+    },
+    "dataPropertyOrder": {
+      "&": ["base_url"]
+    },
+    "isPrivate": false,
+    "metaSortKey": 1592787977881,
+    "modified": 1592788012518,
+    "name": "Base Environment",
+    "parentId": "wrk_6386c2df6a314e169006c5c45adba633",
+    "_type": "environment"
+  }, {
+    "_id": "jar_22641cf0fe0959afda19df99444c9e80ba3df04f",
+    "cookies": [],
+    "created": 1592787977890,
+    "modified": 1592787977890,
+    "name": "Default Jar",
+    "parentId": "wrk_6386c2df6a314e169006c5c45adba633",
+    "_type": "cookie_jar"
+  }, {
+    "_id": "spc_29336d8c865c460f82277e4389f619f8",
+    "contentType": "yaml",
+    "contents": "",
+    "created": 1592787977708,
+    "fileName": "GoBarber - 2020",
+    "modified": 1592787977708,
+    "parentId": "wrk_6386c2df6a314e169006c5c45adba633",
+    "_type": "api_spec"
+  }, {
+    "_id": "env_a8622a84822f42a6b3aebb50a46352e3",
+    "color": "#7d69cb",
+    "created": 1592788020926,
+    "data": {
+      "base_url": "http://localhost:3333",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTI5NzAxMDQsImV4cCI6MTU5MzA1NjUwNCwic3ViIjoiNTZkNmQyNjctMjY0Yy00NjA5LTk5ODAtZWQ5NThlOWU3ZDY4In0.4xuWMZvRFiPewuyG2m84iva1xTwEMCgCp7Ts20kHo4I"
+    },
+    "dataPropertyOrder": {
+      "&": ["base_url", "token"]
+    },
+    "isPrivate": false,
+    "metaSortKey": 1592788020926,
+    "modified": 1592970183406,
+    "name": "local",
+    "parentId": "env_22641cf0fe0959afda19df99444c9e80ba3df04f",
+    "_type": "environment"
+  }]
+}
