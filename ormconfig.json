@@ -22,7 +22,7 @@
     "type": "mongodb",
     "host": "localhost",
     "port": 27017,
-    "database": "gs.gobarber",
+    "database": "gsgobarber",
     "useUnifiedTopology": true,
     "entities": [
       "./src/modules/**/infra/typeorm/schemas/*.ts"
