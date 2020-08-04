@@ -1,7 +1,7 @@
 version: "3.1"
 
 services:
-  gobarber_db:
+  gostack.postgres:
     image: postgres
     container_name: gostack.postgres
     environment:
@@ -10,3 +10,9 @@ services:
       POSTGRES_DB: gobarber
     ports:
       - 5432:5432
+  gostack.postgres:
+    image: mongo
+    container_name: gostack.mongo
+    ports:
+      - 27017:27017
+
