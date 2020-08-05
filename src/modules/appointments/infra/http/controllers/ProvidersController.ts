@@ -12,8 +12,6 @@ export default class ProvidersController {
       user_id,
     });
 
-    providers.map(provider => delete provider.password);
-
     return response.json(providers);
   }
 }

@@ -34,5 +34,5 @@ app.use(
 );
 
 app.listen(3333, () => {
-  console.log('🚀 Server started and running on http://localhost:3333/');
+  console.log(`🚀 Server started and running on ${process.env.APP_API_URL}`);
 });
