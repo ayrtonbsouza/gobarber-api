@@ -4,13 +4,16 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import 'express-async-errors';
 import { errors } from 'celebrate';
+
 import uploadConfig from '@config/upload.config';
 import AppError from '@shared/errors/AppError';
+import rateLimiter from './middlewares/rateLimiter';
 import routes from './routes';
 import '@shared/infra/typeorm';
 import '@shared/container';
 
 const app = express();
+app.use(rateLimiter);
 app.use(cors());
 app.use(express.json());
 app.use('/files', express.static(uploadConfig.uploadsFolder));
@@ -25,7 +28,6 @@ app.use(
         message: error.message,
       });
     }
-    console.error(error);
     return response.status(500).json({
       status: 'error',
       message: 'Internal server error',
