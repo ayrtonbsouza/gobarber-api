@@ -34,7 +34,7 @@ class User {
   @UpdateDateColumn()
   updated_at: Date;
 
-  @Expose()
+  @Expose({ name: 'avatar_url' })
   getAvatarUrl(): string | null {
     if (!this.avatar) {
       return null;
@@ -43,7 +43,7 @@ class User {
       case 'disk':
         return `${process.env.APP_API_URL}/files/${this.avatar}`;
       case 's3':
-        return `https://${uploadConfig.config.aws.bucket}.s3.amazonaws.com/${this.avatar}`;
+        return `https://${uploadConfig.config.aws.bucket}.s3.us-east-2.amazonaws.com/${this.avatar}`;
       default:
         return null;
     }
