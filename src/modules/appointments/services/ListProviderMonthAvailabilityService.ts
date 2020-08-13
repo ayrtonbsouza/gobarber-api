@@ -1,7 +1,6 @@
 import { injectable, inject } from 'tsyringe';
 import { getDaysInMonth, getDate, isAfter } from 'date-fns';
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
-import { DocDB } from 'aws-sdk';
 
 interface IRequest {
   provider_id: string;
@@ -34,11 +33,11 @@ class ListProviderMonthAvailabilityService {
       },
     );
 
-    const numberOfDaysInMonth = getDaysInMonth(new Date(year, month - 1));
+    const numberOfDaysinMonth = getDaysInMonth(new Date(year, month - 1));
 
     const eachDayArray = Array.from(
-      { length: numberOfDaysInMonth },
-      (_, index) => index + 1,
+      { length: numberOfDaysinMonth },
+      (value, index) => index + 1,
     );
 
     const availability = eachDayArray.map(day => {
