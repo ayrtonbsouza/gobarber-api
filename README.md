@@ -23,7 +23,7 @@ O projeto foi feito com as seguintes tecnologias:
 ## Starting Application
 
 ```sh
-$ cd gs-backend-ts-node-gobarber-lesson
+$ cd gobarber-api
 
 # Creating the database Docker image:
 # Within the project, there is already a docker-compose.yml file that has the
