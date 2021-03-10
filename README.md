@@ -3,7 +3,7 @@
 
 # GoBarber - API
 
-This is the code of my personal landing page. It's open source, anyone can see how I developed my page.
+This is the code of GoStack main project, called GoBarber.
 
 ![2021-03-09 23 31 55](https://media.giphy.com/media/Lm6bmg75wR7Llcf9JG/giphy.gif)
 
