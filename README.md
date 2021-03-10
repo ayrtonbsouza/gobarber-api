@@ -20,8 +20,6 @@ O projeto foi feito com as seguintes tecnologias:
 - [JWT](https://jwt.io/)
 {...}
 
-```yarn```
-
 ## Starting Application
 
 ```sh
