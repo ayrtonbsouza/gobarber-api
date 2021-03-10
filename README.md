@@ -1,30 +1,17 @@
-# Node API - Lesson - GoBarber
-<div align="center" style="margin-bottom: 20px;">
-<img alt="gobarber" src="https://camo.githubusercontent.com/d25397e9df01fe7882dcc1cbc96bdf052ffd7d0c/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f676f6c64656e2d77696e642f626f6f7463616d702d676f737461636b2f6865616465722d6465736166696f732e706e67" width="auto" heigth="auto"/>
-</div>
 
-<div align="center" style="margin: 20px;">
+![readme-headers_GoStack-Node](https://user-images.githubusercontent.com/30063455/110576974-78d44780-8140-11eb-83e0-bca9bef1cd52.png)
 
-<p align="center" >
-  <a href="#fire-prévia-da-aplicação"> :fire: Prévia da Aplicação</a> |
-  <a href="#rocket-tecnologias-usadas"> :rocket: Tecnologias Usadas</a> |
-  <a href="#zap-executando-o-projeto"> :zap: Executando o Projeto </a>
-</p>
+# GoBarber - API
 
-</div>
+This is the code of my personal landing page. It's open source, anyone can see how I developed my page.
 
-## :barber: O projeto
+![2021-03-09 23 31 55](https://media.giphy.com/media/Lm6bmg75wR7Llcf9JG/giphy.gif)
 
-Aplicação para agendar e gerenciar serviços de beleza, onde prestadores de serviços podem se cadastrar,
-e usuários poderão marcar agendamentos com estes provedores.
+## About this code
 
-## :fire: Prévia da Aplicação
+It was developed using Node and TypeScript. This project was developed during RocketSeat's GoStack Bootcamp and it's used as back-end on GoBarber Application. You can find the React web application [here](https://github.com/ayrtonbsouza/gobarber-web) and the React Native mobile application [here](https://github.com/ayrtonbsouza/gobarber-mobile)
 
-<div align="center">
-<img src="https://media.giphy.com/media/Lm6bmg75wR7Llcf9JG/giphy.gif" alt="preview"/>
-</div>
-
-### :rocket: Tecnologias Usadas
+### Tech Stack
 
 O projeto foi feito com as seguintes tecnologias:
 
@@ -33,27 +20,31 @@ O projeto foi feito com as seguintes tecnologias:
 - [JWT](https://jwt.io/)
 {...}
 
-## :zap: Executando o Projeto
-#### Clonando o projeto
-```sh
-$ git clone https://github.com/ayrtonbsouza/gs-backend-ts-node-gobarber-lesson.git
-```
-#### Iniciando a API
+```yarn```
+
+## Starting Application
+
 ```sh
 $ cd gs-backend-ts-node-gobarber-lesson
 
-# Criando a imagem Docker do banco de dados:
-# Dentro do projeto, já existe uma arquivo docker-compose.yml que possui o
-# PostgreSQL como banco de dados, basta ter o Docker instalado em sua máquina.
-$ docker-compose up -d # Iniciará em background e não irá bloquear o shell
+# Creating the database Docker image:
+# Within the project, there is already a docker-compose.yml file that has the
+# PostgreSQL as a database, just have Docker installed on your machine.
+$ docker-compose up -d # Will start in the background and will not block the shell
 
-# Rodando as migrations para o banco de dados e iniciando o projeto
+# Running migrations to the database and starting the project
 $ yarn && yarn typeorm migration:run && yarn dev:server
 ```
 
-### :memo: Licença
+## Run Project
 
-Este projeto é desenvolvido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para saber mais detalhes.
+The second thing is run the project, you can do it by running the following command on your terminal:
+
+```yarn dev:server```
+
+## License
+
+This project is developed under MIT License. See [LICENSE](LICENSE.md) file to know more details.
 
 
-Made with ❤️ by **Ayrton Souza** :wave: [Get in touch!](https://www.linkedin.com/in/ayrtonsouza)
+Made with ❤️ by **Ayrton Souza** :wave: [Get in touch!](https://ayrtonsouza.com/)
